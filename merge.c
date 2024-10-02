@@ -26,7 +26,7 @@ int main() {
         printf("%d  ",a[i]);
     }
 
-    printf("\nBefore sorting first array:\n");
+    printf("\nBefore sorting second array:\n");
     for(i=0;i<x;i++) {
         printf("%d  ",b[i]);
     }
