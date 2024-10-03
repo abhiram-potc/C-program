@@ -3,7 +3,7 @@
 int main()
 {
     int c,d,max,i;
-    char ch,x,y;
+    char ch;
     system("clear");
     printf("***Stack OPeration***\n\n");
     printf("Enter limit: ");
