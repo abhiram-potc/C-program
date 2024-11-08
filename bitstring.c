@@ -107,8 +107,30 @@ int main()
     {
         printf("%d  ",su[i]);
     }
-    printf(" : Union of bitstring Subset\n");
+    printf(" : Union of Subset\n");
 
+    
+    for(i=0;i<r;i++)
+    {
+        if(sa[i]==1 || sb[i]==1)
+        {
+            si[i]=1;
+        }
+        else
+        {
+            si[i]=0;
+        }
+    }
+    for (i=0;i<r;i++)
+    {
+        printf("%d  ",si[i]);
+    }
+    printf(" : Union of Subset Bitstring\n");
+    
+    
+    
+    
+    
     for(i=0;i<r;i++)
     {
         if(sa[i]==1 && sb[i]==1)
@@ -120,7 +142,7 @@ int main()
             si[i]=0;
         }
     }
-    for (i=0;i<n;i++)
+    for (i=0;i<r;i++)
     {
         printf("%d  ",si[i]);
     }
@@ -135,16 +157,8 @@ int main()
             printf("%d  ",si[k]);
             k++;
         }
-        else
-        {
-            if(si[i]==0)
-            {
-                printf("%d  ",si[i]);
-            }
-        }
     }
 
     printf(" : Intersection of subset\n");
-
     return 0;
 }
