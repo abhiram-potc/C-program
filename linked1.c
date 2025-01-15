@@ -166,11 +166,18 @@ void del_end() {
         return;
     }
     struct node *temp, *q;
+    if (head->link == NULL) {
+        temp = head;
+        head = NULL;
+        printf("Deleted value: %d\n", temp->data);
+        free(temp);
+        return;
+    }
     q = head;
     while (q->link->link != NULL) {
         q = q->link;
     }
-    temp = q->link;
+    temp = q ->link;
     q->link = NULL;
     printf("Deleted value: %d\n", temp->data);
     free(temp);
@@ -186,6 +193,13 @@ void del_loc() {
     }
     struct node *temp, *q;
     q = head;
+    if (loc == 1) {
+        head = head->link;
+        temp = q;
+        printf("Deleted value: %d\n", temp->data);
+        free(temp);
+        return;
+    }
     for (i = 1; i < loc - 1 && q != NULL; i++) {
         q = q->link;
     }
